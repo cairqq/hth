@@ -1,0 +1,21 @@
+Start
+ 1 allow user to select the alarm time
+    - input hours, minutes
+    - select AM or PM
+    - select the day 
+
+   
+    - convert input to a timestamp 
+2 Loop 
+a if time matches timestamp go to c
+b if time does not match timestamp go back to a 
+c set off alarm 
+
+3 alarm runs
+-plays audio 
+-vibrates 
+-asks user to stop
+
+4 if user asks to stop-- pause the event
+  else keep playing alarm until stopped
+End
