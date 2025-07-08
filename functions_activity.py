@@ -6,7 +6,7 @@ def total_price(item1, item2):
     return total_sum
 
 def price_difference(item1, item2):
-    difference = menu[item1] - menu[item2]
+    difference = abs(menu[item1] - menu[item2])
     return difference
 
 def inflation(item, multiplier):
@@ -17,6 +17,10 @@ def deflation(item, divisor):
     menu[item] = menu[item] / divisor
     return menu
 
+def floor_discount(divisor):
+    for item in menu:
+        menu[item] = menu[item] // divisor
+    return menu
 print(total_price('Pizza', 'Burger'))
 print(price_difference('Burger', 'Pizza'))
 print(inflation('Pizza', 2))
